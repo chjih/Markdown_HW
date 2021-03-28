@@ -166,4 +166,48 @@
 
 # 6. 자동 링크 (Autolinks)
 
-- 
+- 많은 markdown 프로세서는 자동으로 URL을 링크로 변환함
+- 대괄호를 사용하지 않고도 자동으로 링크로 바뀜
+
+### *예)*
+
+```
+
+http://www.naver.com/
+
+```
+
+### *<출력 결과>*
+
+http://www.naver.com/
+
+<br>
+<br>
+<br>
+
+# 7. 허용되지 않는 원시 HTML
+
+- GFM은 태그 필터 확장을 활성화함
+- HTML 출력을 렌더링할 때 다음 HTML 태그가 필터링 됨
+
+<br>
+
+- \<tilte>
+- \<textarea>
+- \<style>
+- \<xmp>
+- \<iframe>
+- \<noembed>
+- \<noframes>
+- \<script>
+- \<plaintext>
+
+<br>
+
+- 필터링은 '<'을 '&lt;'로 대체하여 수행됨
+- 이 태그들은 특히 HTML이 고유한 방식으로 해석되는 방법을 변경할 때 선택 됨
+- 일반적으로 다른 렌더링되 MARKdown 컨텐츠의 맥락에서 바람직하지 않음
+
+<br>
+
+- 다른 모든 HTML 태그는 그대로 유지
