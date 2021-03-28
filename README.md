@@ -172,7 +172,11 @@
 - 후행 구두점(특히 ?, !, :, \*,,등)은 링크 내부에 포함될 수 있지만, 자동 링크의 일부로 간주되지 않음
 - 링크에서 여는 괄호보다 닫히는 괄호 수가 더 많은 경우, 자둥 링크의 일치하지 않은 후행 괄호 부분은 고려하지 않음
 - 세미콜론(;)으로 끝나는 경우 엔티티 참조와 유사한지, 이전 텍스트가 하나 이상의 영숫자 뒤에 있는지 확인 -> 자동 링크에서 제외됨
-- 
+- 확장 된 이메일 자동 링크
+  - 마침표가 하나이상이여야 함
+  - 마지막 문자가 -또는 \_가 아니여야 함
+  - @기호 필요
+
 ### *예)*
 
 ```
@@ -181,6 +185,8 @@ http://www.naver.com/
 www.naver.com/
 www.google.com/search?q=Markup+(business)
 www.google.com/search?q=Markup+(business)))
+www.google.com/search?q=commonmark&hl=en
+www.google.com/search?q=commonmark&hl;
 
 ```
 
@@ -188,6 +194,10 @@ www.google.com/search?q=Markup+(business)))
 
 http://www.naver.com/
 www.naver.com/
+www.google.com/search?q=Markup+(business)
+www.google.com/search?q=Markup+(business)))
+www.google.com/search?q=commonmark&hl=en
+www.google.com/search?q=commonmark&hl;
 
 <br>
 <br>
